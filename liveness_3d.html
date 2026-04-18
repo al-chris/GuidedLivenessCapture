@@ -313,8 +313,9 @@
       let rx = 0, ry = 0;
       if (step.id === 'left')  ry = -35;
       if (step.id === 'right') ry =  35;
-      if (step.id === 'up')    rx =  25;
-      if (step.id === 'down')  rx = -25;
+      // Note: invert X rotation signs so 3D model visually matches "Tilt up/down"
+      if (step.id === 'up')    rx = -25;
+      if (step.id === 'down')  rx =  25;
       window.headModel.setOrientation(rx, ry);
 
       // Arrows
