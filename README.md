@@ -49,11 +49,10 @@ Note: For camera access prefer `http://localhost`. Opening files via `file:///` 
 
 - Development order: `liveness_ui.html` was created first, then `head_viewer.html`, and finally `liveness_3d.html` which combines the two.
 - Head model source: downloaded from Free3D — https://free3d.com/3d-model/femalehead-v4--971578.html
-- Verify the model's license before redistributing or bundling it with this project. If you'd like, I can add a `LICENSE` file or include a local copy of the model (only if you have redistribution rights).
 
 ## License
 
-No license included. Add a `LICENSE` file to specify usage terms (for example, MIT).
+[LICENSE](LICENSE)
 
 ## Contact
 
