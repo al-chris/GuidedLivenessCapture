@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <title>Guided Liveness Capture Logo</title>
+  <desc>A 3D face mesh inside a camera viewfinder with an orbital arrow indicating guided movement.</desc>
+  
+  <defs>
+    <!-- Deep premium background gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    
+    <!-- Face depth gradient to separate it from the background -->
+    <linearGradient id="faceGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <!-- Neon tech blue for the camera viewfinder -->
+    <linearGradient id="bracketGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+
+    <!-- Success emerald green for the guided movement arrow -->
+    <linearGradient id="arrowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#34d399" />
+    </linearGradient>
+  </defs>
+
+  <!-- 1. Base App Icon Background -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+
+  <!-- 2. Solid Base of the Face (Creates depth by blocking background lines) -->
+  <!-- Top half is a perfect semicircle, bottom half is a curved jaw down to the chin -->
+  <path d="M 176 230 
+           A 80 80 0 0 1 336 230 
+           C 336 290 296 350 256 360 
+           C 216 350 176 290 176 230 Z" 
+        fill="url(#faceGrad)" />
+
+  <!-- 3. Inner 3D Mesh & Depth Lines (Represents spatial liveness tracking) -->
+  <g fill="none" stroke="#475569" stroke-width="16" stroke-linecap="round">
+    <!-- Vertical facial center line -->
+    <path d="M 256 150 L 256 360" />
+    <!-- Horizontal forehead contour -->
+    <path d="M 194 180 Q 256 215 318 180" />
+    <!-- Horizontal equator contour -->
+    <path d="M 176 230 Q 256 290 336 230" />
+  </g>
+
+  <!-- 4. Center Focus/Tracking Node -->
+  <circle cx="256" cy="260" r="16" fill="#38bdf8" />
+  <circle cx="256" cy="260" r="32" fill="none" stroke="#38bdf8" stroke-width="12" />
+
+  <!-- 5. Bright Face Silhouette Outline -->
+  <path d="M 176 230 
+           A 80 80 0 0 1 336 230 
+           C 336 290 296 350 256 360 
+           C 216 350 176 290 176 230 Z" 
+        fill="none" stroke="#f8fafc" stroke-width="32" stroke-linejoin="round" />
+
+  <!-- 6. Camera Viewfinder Brackets -->
+  <g stroke="url(#bracketGrad)" stroke-width="40" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Top Left -->
+    <path d="M 100 180 L 100 100 L 180 100" />
+    <!-- Top Right -->
+    <path d="M 412 180 L 412 100 L 332 100" />
+    <!-- Bottom Left -->
+    <path d="M 100 332 L 100 412 L 180 412" />
+    <!-- Bottom Right -->
+    <path d="M 412 332 L 412 412 L 332 412" />
+  </g>
+
+  <!-- 7. Guided Movement Orbital Arrow (Wraps around the face) -->
+  <g fill="none" stroke="url(#arrowGrad)" stroke-width="32" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Elliptical sweep passing through the viewfinder gaps and under the chin -->
+    <path d="M 80 270 A 176 72 0 0 0 432 270" />
+    <!-- Sharp arrowhead pointing outwards after a 45 degree rotation -->
+    <path d="M 408 294 L 432 270 L 456 294" transform="rotate(25 432 270)" />
+  </g>
+
+</svg>
